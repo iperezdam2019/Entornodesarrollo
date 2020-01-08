@@ -14,8 +14,8 @@ clean:
 .PHONY:dist
 dist: clean calcula
 	rm -rf ../dist;
-	mkdir -p ../Escritorio/MakeFile/dist
-	cp calcula ../Escritorio/MakeFile/dist
+	mkdir -p ../Desktop/GitHub/Entornodesarrollo/Unitat4
+	cp calcula ../Desktop/GitHub/Entornodesarrollo/Unitat4
 
 .PHONY:targz
 targz: clean
@@ -25,3 +25,6 @@ targz: clean
 	qzip calcula.tar
 	rm -rf calcula.tar
 	rm -rf source	
+
+install: dist
+	cp -r ../dist/*/
